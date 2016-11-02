@@ -1,0 +1,299 @@
+/**
+ * Baseline grid: 7pt
+ * Distance from top to content: 12.7mm
+ *
+ * @author      Kim-Christian Meyer
+ * @copyright   2016 Kim-Christian Meyer
+ * @license     GPL-3.0+
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Fira Sans', 'Myriad Pro', sans-serif;
+  font-size: 10pt;
+  line-height: 14pt;
+}
+
+p {
+  margin: 0 0 14pt 0;
+}
+
+
+.page-hd {
+
+}
+
+.clear-storage-btn {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 8px 20px;
+  font-size: 10pt;
+  line-height: 14pt;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.clear-storage-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.clear-storage-btn:active {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.clear-storage-btn.is-visible {
+  display: block;
+}
+
+.editors {
+  display: none; /* Not needed anymore because of contenteditable */
+  float: left;
+  width: 50%;
+  background: #ddd;
+  height: 100%;
+  padding: 24mm;
+  box-sizing: border-box;
+}
+
+.preview {
+  position: relative;
+  padding: 24mm;
+  width: 210mm; /* DIN A4 */
+  box-sizing: border-box;
+}
+
+/* DIN lang size: 220mm x 110mm*/
+/* DIN A4 size: 210mm x 297mm */
+.address-overlay {
+  position: absolute;
+  /* DIN lang: address window must be 15mm from bottom, and 20mm from left
+     horizontal difference envelope vs. paper: 220mm - 210mm = 10mm;
+
+     top:
+     105mm (line 1) - 15mm (margin bottom) - 45mm (height) + 1.5mm (puffer) = 46.5mm
+     left:
+     20mm - 5mm (horizontal difference envelope vs. paper / 2) = 15mm */
+  left: 15mm;
+  top: 46.5mm;
+
+  /* Standard DIN lang width and height */
+  width: 90mm;
+  height: 45mm;
+
+  border-radius: 4mm;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: 0;
+}
+
+.address-wrapper {
+  position: absolute;
+  left: 20mm;
+  top: 126pt;
+  width: 90mm;
+  padding: 14pt 4mm;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.address-overline {
+  font-size: 8pt;
+}
+
+.address {
+  font-size: 10pt;
+}
+
+.sidebar {
+  position: absolute;
+  right: 24mm;
+  top: 70pt;
+  width: 40mm;
+  height: 182pt;
+  font-size: 8pt;
+}
+
+.align-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.sidebar-date {
+  margin-top: 14pt;
+}
+
+.sidebar-email {
+  margin-top: 14pt;
+}
+
+.sidebar-phone {
+  margin-top: 14pt;
+}
+
+.body {
+  position: absolute;
+  left: 24mm;
+  top: 308pt;
+  right: 24mm;
+}
+
+.body-subject {
+  font-weight: bold;
+  margin-bottom: 14pt;
+}
+
+
+.attachments-hd {
+  font-style: italic;
+  font-size: 8pt;
+  line-height: 12pt;
+  margin: 0;
+}
+
+.attachments-bd {
+  font-size: 8pt;
+  line-height: 12pt;
+}
+
+.line {
+  position: absolute;
+  left: 5mm;
+  height: 0.3mm;
+  /* Won´t get printed, using 1x1 pixel instead */
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+}
+
+.line-img-helper {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.line-1 {
+  top: 105mm;
+  width: 3mm;
+}
+
+.line-2 {
+  top: 148.5mm;
+  width: 5mm;
+}
+
+.line-3 {
+  top: 210mm;
+  width: 3mm;
+}
+
+.baseline-10pt {
+  padding-top: 4.7pt;
+  margin-bottom: -4.7pt;
+}
+
+.baseline-8pt {
+  padding-top: 5.1pt;
+  margin-bottom: -5.1pt;
+}
+
+.baseline-8pt-bottom {
+  padding-bottom: 1.4pt;
+}
+
+/* Only for debugging */
+.baselines {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.baseline {
+  height: 14pt;
+}
+
+.baseline:nth-child(2n) {
+  background: rgba(255,0,0,0.3);
+}
+
+@media screen {
+  /* Create a wider border around the element without effecting other elements */
+  *[contenteditable] {
+    position: relative;
+    display: inline-block;
+    margin: -7pt;
+    padding: 7pt;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+
+  *[contenteditable]:focus {
+    z-index: 20;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .baseline-8pt:focus {
+    padding-top: 12.1pt;
+    margin-bottom: -12.1pt;
+  }
+
+  .body-subject:focus {
+    margin-bottom: 7pt; /* = 14pt - 7pt */
+  }
+
+  body {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .preview {
+    margin: 50px auto;
+    background: white;
+    height: 297mm;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+@media print {
+  @page {
+    size: auto;   /* auto is the current printer page size */
+    margin: 0mm;  /* This affects the margin in the printer settings */
+  }
+
+  .page-break {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .preview {
+  }
+}

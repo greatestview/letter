@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js" manifest="letter.appcache">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+  <!--
+    Welcome to this letter generator, feel free to look around.
+    Your data is only stored locally in your browser, no need to send private
+    text to foreign servers. Just work on one letter and print it when it´s done,
+    or save it as a PDF via a PDF printer (like the one´s built into Google Chrome).
+    In addition, this site works completely offline!
+
+    @author      Kim-Christian Meyer
+    @copyright   2016 Kim-Christian Meyer
+    @license     GPL-3.0+
+  -->
+
+  <title>Brief Generator</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+  <meta name="robots" content="noindex">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <a href="" class="clear-storage-btn no-print">Lokalen Entwurf im Browser löschen</a>
+
+  <section class="editors">
+    <h1 class="page-hd">persönlicher Brief Generator</h1>
+    <?php /*
+    <textarea id="address-from"></textarea>
+    <textarea id="address-to"></textarea>
+    <h3>Markdown Editor</h3>
+    <textarea id="markdown_textarea" cols="74" rows="20"></textarea>
+    */ ?>
+  </section>
+
+  <section class="preview">
+    <div class="address-overlay"></div>
+    <div class="address-wrapper box">
+      <div class="address-overline baseline-8pt">
+        <div contenteditable="true">Erika Mustermann, Musterstraße 12, 12345 Berlin</div>
+      </div>
+      <div class="address baseline-10pt">
+        <div contenteditable="true">
+          <br/>
+          Google Germany GmbH<br/>
+          ABC-Strasse 19<br/>
+          20354 Hamburg
+        </div>
+      </div>
+    </div>
+    <div class="sidebar box baseline-8pt-bottom">
+      <div class="sidebar-inner align-bottom">
+        <div class="sidebar-text">
+          <div contenteditable="true">Erika Mustermann<br/>
+            Musterstraße 12<br/>
+            12345 Berlin<br/><br/>
+            erika.mustermann@gmail.com<br/><br/><br/>
+            <span class="sidebar-date">28. Dezember 2012</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body box baseline-10pt">
+      <div class="body-subject">
+        <div contenteditable="true">Dies ist ein einfacher und effektiver Brief-Generator</div>
+      </div>
+      <div class="body-text">
+        <div contenteditable="true">
+          <p>Sehr geehrte Damen und Herren,</p>
+          <p>Dieser Generator verwendet das Contenteditable-Element für eine einfache Bearbeitung. Über die Drucken-Funktion des Browsers kann der Brief entweder gedruckt oder als PDF-Datei gespeichert werden (Google Chrome bietet diese Option z.B. von Haus aus an). Jede Bearbeitung wird automatisch im Local Storage des Browsers gespeichert, man ist also auf keine Internetverbindung angewiesen und kann die Arbeit jederzeit ohne Gefahr unterbrechen.</p>
+          <p class="page-break"><em>Kursiver Text kann via CMD+I und STRG+I erzeugt werden.</em></p>
+          <p><strong>Fetter Text kann via CMD+B und STRG+B erzeugt werden.</strong></p>
+          <p>Nichtbenötigte Zeilen können hier einfach gelöscht werden. Dieser Generator versendet übrigens keine Daten an irgendwelche Server, der Text bleibt lokal im Browser gespeichert und verlässt diesen nicht.</p>
+          <p class="page-break">Mit freundlichen Grüßen<br/><br/><br/><br/>
+          Erika Mustermann</p>
+        </div>
+      </div>
+      <div class="footer-attachments">
+        <div class="attachments-bd baseline-8pt">
+          <div contenteditable="true">
+            <strong><em>Anlagen</em></strong>:<br/>
+            Lorem ipsum dolor sit amet
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="line line-1"><img src="img/1x1-semiblack.png" class="line-img-helper" alt="line" /></div>
+    <div class="line line-2"><img src="img/1x1-semiblack.png" class="line-img-helper" alt="line" /></div>
+    <div class="line line-3"><img src="img/1x1-semiblack.png" class="line-img-helper" alt="line" /></div>
+
+    <div class="baselines">
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+      <div class="baseline"></div>
+    </div>
+  </section>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
