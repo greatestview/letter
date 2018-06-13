@@ -21,11 +21,14 @@ Letter is a very simple and basic letter generator running in a browser environm
 ## Demo
 [https://greatestview.de/letter/](https://greatestview.de/letter/)
 
+## Usage
+Simply use the link above. If you want to personalize your letter, you can simply download this project and run it from your hard drive or upload it to a server.
+
 ## License
-[GNU General Public License v3](http://www.gnu.org/licenses/gpl-3.0.html) or later
+[GNU General Public License v3](http://www.gnu.org/licenses/gpl-3.0.html) or later  
 Copyright (c) 2016, Kim-Christian Meyer
 
 ## Contact
-Kim-Christian Meyer
-[info@greatestview.de](mailto:info@greatestview.de)
+Kim-Christian Meyer  
+[info@greatestview.de](mailto:info@greatestview.de)  
 [greatestview.de](https://greatestview.de)
