@@ -19,38 +19,13 @@
   ];
 
 
-  gv.createDateGerman = function() {
-    var monthNames = [
-      "Januar",
-      "Februar",
-      "März",
-      "April",
-      "Mai",
-      "Juni",
-      "Juli",
-      "August",
-      "September",
-      "Oktober",
-      "November",
-      "Dezember"
-    ];
-
-    var date = new Date();
-    var day = date.getDate();
-    var month = date.getMonth();
-    var year = date.getFullYear();
-
-    return day + '. ' + monthNames[month] + ' ' + year;
+  gv.createDateGerman = function () {
+    return new Date().toLocaleDateString('de', { day: 'numeric', month: 'long', year: 'numeric' });
   }
 
 
-  gv.createDateEnglishShort = function() {
-    var date = new Date();
-    var day = ('0' + date.getDate()).slice(-2); // with leading zero
-    var month = ('0' + (date.getMonth() + 1)).slice(-2); // with leading zero
-    var year = date.getFullYear();
-
-    return year + '-' + month + '-' + day;
+  gv.createDateEnglishShort = function () {
+    return new Date().toISOString().slice(0, 10)
   }
 
 
