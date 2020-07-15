@@ -35,7 +35,7 @@ p {
 
 }
 
-.clear-storage-btn {
+#clear-storage-btn {
   display: none;
   position: fixed;
   left: 0;
@@ -51,15 +51,15 @@ p {
   text-decoration: none;
 }
 
-.clear-storage-btn:hover {
+#clear-storage-btn:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.clear-storage-btn:active {
+#clear-storage-btn:active {
   background: rgba(0, 0, 0, 0.7);
 }
 
-.clear-storage-btn.is-visible {
+#clear-storage-btn.is-visible {
   display: block;
 }
 
@@ -113,11 +113,11 @@ p {
   box-sizing: border-box;
 }
 
-.address-overline {
+#address-overline {
   font-size: 8pt;
 }
 
-.address {
+#address {
   font-size: 10pt;
 }
 
@@ -136,15 +136,7 @@ p {
   width: 100%;
 }
 
-.sidebar-date {
-  margin-top: 14pt;
-}
-
-.sidebar-email {
-  margin-top: 14pt;
-}
-
-.sidebar-phone {
+#sidebar-date, #sidebar-email, #sidebar-phone {
   margin-top: 14pt;
 }
 
@@ -155,20 +147,12 @@ p {
   right: 24mm;
 }
 
-.body-subject {
+#body-subject {
   font-weight: bold;
   margin-bottom: 14pt;
 }
 
-
-.attachments-hd {
-  font-style: italic;
-  font-size: 8pt;
-  line-height: 12pt;
-  margin: 0;
-}
-
-.attachments-bd {
+#attachments-bd {
   font-size: 8pt;
   line-height: 12pt;
 }
