@@ -160,15 +160,7 @@ p {
 .line {
   position: absolute;
   left: 5mm;
-  height: 0.3mm;
-  /* Won´t get printed, using 1x1 pixel instead */
-  /*background-color: rgba(0, 0, 0, 0.3);*/
-}
-
-.line-img-helper {
-  width: 100%;
-  height: 100%;
-  display: block;
+  border-top: 0.3mm solid rgba(0, 0, 0, 0.3);
 }
 
 .line-1 {
