@@ -19,7 +19,7 @@ Letter is a very simple and basic letter generator running in a browser environm
 - German only
 
 ## Demo
-[https://greatestview.de/letter/](https://greatestview.de/letter/)
+[https://letter.greatestview.de/](https://letter.greatestview.de/)
 
 ## Usage
 Simply use the link above. If you want to personalize your letter, you can simply download this project and run it from your hard drive or upload it to a server.
