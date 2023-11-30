@@ -35,7 +35,7 @@ p {
 
 }
 
-.clear-storage-btn {
+#clear-storage-btn {
   display: none;
   position: fixed;
   left: 0;
@@ -51,15 +51,15 @@ p {
   text-decoration: none;
 }
 
-.clear-storage-btn:hover {
+#clear-storage-btn:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.clear-storage-btn:active {
+#clear-storage-btn:active {
   background: rgba(0, 0, 0, 0.7);
 }
 
-.clear-storage-btn.is-visible {
+#clear-storage-btn.is-visible {
   display: block;
 }
 
@@ -113,11 +113,11 @@ p {
   box-sizing: border-box;
 }
 
-.address-overline {
+#address-overline {
   font-size: 8pt;
 }
 
-.address {
+#address {
   font-size: 10pt;
 }
 
@@ -136,15 +136,7 @@ p {
   width: 100%;
 }
 
-.sidebar-date {
-  margin-top: 14pt;
-}
-
-.sidebar-email {
-  margin-top: 14pt;
-}
-
-.sidebar-phone {
+#sidebar-date, #sidebar-email, #sidebar-phone {
   margin-top: 14pt;
 }
 
@@ -155,20 +147,12 @@ p {
   right: 24mm;
 }
 
-.body-subject {
+#body-subject {
   font-weight: bold;
   margin-bottom: 14pt;
 }
 
-
-.attachments-hd {
-  font-style: italic;
-  font-size: 8pt;
-  line-height: 12pt;
-  margin: 0;
-}
-
-.attachments-bd {
+#attachments-bd {
   font-size: 8pt;
   line-height: 12pt;
 }
@@ -176,15 +160,7 @@ p {
 .line {
   position: absolute;
   left: 5mm;
-  height: 0.3mm;
-  /* Won´t get printed, using 1x1 pixel instead */
-  /*background-color: rgba(0, 0, 0, 0.3);*/
-}
-
-.line-img-helper {
-  width: 100%;
-  height: 100%;
-  display: block;
+  border-top: 0.3mm solid rgba(0, 0, 0, 0.3);
 }
 
 .line-1 {
@@ -217,23 +193,11 @@ p {
 }
 
 /* Only for debugging */
-.baselines {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.baseline {
-  height: 14pt;
-}
-
-.baseline:nth-child(2n) {
-  background: rgba(255,0,0,0.3);
+.debug .preview {
+  background-image:
+    repeating-linear-gradient(to right, grey 0mm .3mm, transparent 0mm 1cm),
+    repeating-linear-gradient(to bottom, grey 0mm .3mm, transparent 0mm 1cm),
+    repeating-linear-gradient(to bottom, transparent 0 14pt, rgba(255, 0, 0, .3) 14pt 28pt);
 }
 
 @media screen {
@@ -292,8 +256,5 @@ p {
 
   .no-print {
     display: none !important;
-  }
-
-  .preview {
   }
 }
